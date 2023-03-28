@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-theme_green-50 h-[100dvh]
+  }
+  button {
+    cursor: pointer;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000000s ease-in-out 0s;
+  }
+}
+@layer utilities {
+  #root {
+    height: 100%;
+    overflow: auto;
+  }
+  .form-group {
+    @apply relative mb-3;
+  }
+  .form-label {
+    @apply text-sm leading-6 font-medium text-slate-600 group-focus-within:text-theme_purple-500 mb-1 inline-block;
+  }
+  .form-control {
+    @apply bg-theme_green-300 focus:ring-2 focus:ring-theme_green-500 focus:outline-none appearance-none w-full leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 px-3 ring-1 ring-slate-200 shadow-sm;
+  }
+  .btn {
+    @apply bg-theme_purple-500 shadow text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg disabled:bg-theme_purple-500/50 disabled:shadow-none;
+  }
+  .swiperBtn {
+    @apply bg-theme_green-500 text-white
+  }
+  .swiperBtn:after {
+    @apply text-base
+  }
+  .hasError {
+    @apply text-rose-600 text-xs leading-4 font-medium py-1;
+  }
+}
