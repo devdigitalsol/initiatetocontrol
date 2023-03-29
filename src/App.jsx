@@ -1,12 +1,12 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ProtectectRoute from "./ProtectectRoute";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import PageNotFound from "./pages/PageNotFound";
 import Layout from "./Layout";
 import SelectTemplate from "./pages/SelectTemplate";
 import DocInfo from "./pages/DocInfo";
 import DownloadPoster from "./pages/DownloadPoster";
+import Admin from "./pages/Admin";
 
 const App = () => {
   return (
@@ -20,8 +20,9 @@ const App = () => {
             <Route path="doctor-information" element={<DocInfo />} />
             <Route path="download-poster" element={<DownloadPoster />} />
           </Route>
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<Navigate to={"/"} />} />
         </Route>
+        <Route path="admin" element={<Admin />} />
       </Routes>
     </>
   );
