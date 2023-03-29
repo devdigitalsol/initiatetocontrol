@@ -71,7 +71,7 @@ const DownloadPoster = () => {
     };
 
     await axios
-      .post("https://initiatetocontrol.com/insert.php", data)
+      .post("insert.php", data)
       .then((response) => {
         console.log(response);
         if (response.status === 200) {
