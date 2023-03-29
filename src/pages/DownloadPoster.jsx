@@ -1,6 +1,6 @@
 import SANOFILOGO from "./../assets/sanofi_logo.svg";
 import BOTTOM from "./../assets/bottom.svg";
-import HAND from "./../assets/hand.svg";
+import HAND from "./../assets/hand12.svg";
 import CIRCLE from "./../assets/circleFrame.svg";
 import html2canvas from "html2canvas";
 import { useContext, useEffect } from "react";
@@ -44,10 +44,10 @@ const DownloadPoster = () => {
       });
   };
   return (
-    <div className="grow flex flex-col items-center py-4 gap-4">
+    <div className="grow flex flex-col items-center p-4 gap-4">
       <div
         id="fullImg"
-        className="relative w-[310px] mx-auto bg-white flex flex-col border-4 border-theme_green-500"
+        className="relative w-full mx-auto bg-white flex flex-col border-4 border-theme_green-500"
       >
         <div className="flex w-full items-center justify-end px-4 mt-4">
           <img src={SANOFILOGO} alt="sanofi" className="w-16" />
@@ -62,7 +62,7 @@ const DownloadPoster = () => {
         </div>
         <div className="flex items-center justify-center gap-2 mt-6 w-[260px] mx-auto">
           <div className="w-[50px]">
-            <img src={HAND} alt="sanofi" width={"50px"} height={"78px"} />
+            <img src={HAND} alt="sanofi" width={"50px"} height={"auto"} />
           </div>
           <div className="w-1 h-full bg-theme_green-300"></div>
           <div>
@@ -77,7 +77,7 @@ const DownloadPoster = () => {
             </div>
           </div>
         </div>
-        <img src={BOTTOM} alt="bottom" />
+        <img src={BOTTOM} alt="bottom" width={"100%"} className="w-full" />
       </div>
       <button className="btn" onClick={downloadImage}>
         Download
