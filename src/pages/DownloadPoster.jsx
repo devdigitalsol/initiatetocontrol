@@ -7,9 +7,10 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
 import { useNavigate } from "react-router-dom/dist";
 import { MdOutlineRefresh, MdOutlineFileDownload } from "react-icons/md";
+import axios from "axios";
 const DownloadPoster = () => {
   const navigate = useNavigate();
-  const { docInfo, setIsLoading } = useContext(AppContext);
+  const { user, docInfo, setIsLoading } = useContext(AppContext);
   useEffect(() => {
     if (!docInfo) {
       navigate("/");
@@ -36,19 +37,56 @@ const DownloadPoster = () => {
     })
       .then((canvas) => {
         var myImage = canvas.toDataURL("image/jpeg", 1);
-        // uploadData(myImage);
-        const link = document.createElement("a");
-        link.href = myImage;
-        link.target = "_blank";
-        link.setAttribute("download", "image.jpeg");
-        document.body.appendChild(link);
-        link.click();
-        setIsLoading(false);
+        uploadData(myImage);
+        // const link = document.createElement("a");
+        // link.href = myImage;
+        // link.target = "_blank";
+        // link.setAttribute("download", "image.jpeg");
+        // document.body.appendChild(link);
+        // link.click();
+        // setIsLoading(false);
       })
       .catch(function (error) {
         console.log(error);
         setIsLoading(false);
         alert("oops, something went wrong!", error);
+      });
+  };
+
+  const uploadData = async (img) => {
+    const data = {
+      emp_id: user?.emp_id,
+      emp_name: user?.emp_name,
+      emp_email: user?.emp_email,
+      emp_contact: user?.emp_contact,
+      role: user?.role,
+      hq: user?.hq,
+      manager_emp_id: user?.manager_emp_id,
+      am: user?.am,
+      rbm: user?.rbm,
+      doctor_name: docInfo?.fullName,
+      doctor_speciality: docInfo?.speciality,
+      doctor_place: docInfo?.place,
+      template: img,
+    };
+
+    await axios
+      .post("https://initiatetocontrol.com/insert.php", data)
+      .then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          const link = document.createElement("a");
+          link.href = `https://initiatetocontrol.com/${response.data.path}`;
+          link.target = "_blank";
+          link.setAttribute("download", "image.jpeg");
+          document.body.appendChild(link);
+          link.click();
+          setIsLoading(false);
+        }
+      })
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err);
       });
   };
   return (

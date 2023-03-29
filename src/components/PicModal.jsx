@@ -30,7 +30,7 @@ export default function PicModal({ show, setShow, setFieldValue }) {
   return (
     <>
       {show && (
-        <div className="bg-gray-900/75 fixed top-0 left-0 w-full h-full flex items-center justify-center z-10">
+        <div className="bg-gray-900/75 fixed top-0 left-0 w-full h-full flex items-center justify-center z-20">
           <div className="relative z-10" style={{ minWidth: "250px" }}>
             <div className="bg-white shadow rounded">
               <div className="p-4 text-center">
