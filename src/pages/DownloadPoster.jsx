@@ -6,16 +6,22 @@ import html2canvas from "html2canvas";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
 import { useNavigate } from "react-router-dom/dist";
+import { MdOutlineRefresh, MdOutlineFileDownload } from "react-icons/md";
 const DownloadPoster = () => {
   const navigate = useNavigate();
-  const { docInfo } = useContext(AppContext);
+  const { docInfo, setIsLoading } = useContext(AppContext);
   useEffect(() => {
     if (!docInfo) {
       navigate("/");
     }
   }, []);
 
+  const reloadPage = () => {
+    window.location.reload();
+  };
+
   const downloadImage = () => {
+    setIsLoading(true);
     window.scrollTo(0, 0);
     html2canvas(document.getElementById("fullImg"), {
       allowTaint: true,
@@ -37,9 +43,11 @@ const DownloadPoster = () => {
         link.setAttribute("download", "image.jpeg");
         document.body.appendChild(link);
         link.click();
+        setIsLoading(false);
       })
       .catch(function (error) {
         console.log(error);
+        setIsLoading(false);
         alert("oops, something went wrong!", error);
       });
   };
@@ -79,9 +87,14 @@ const DownloadPoster = () => {
         </div>
         <img src={BOTTOM} alt="bottom" width={"100%"} className="w-full" />
       </div>
-      <button className="btn" onClick={downloadImage}>
-        Download
-      </button>
+      <div className="actionBtns">
+        <button onClick={reloadPage}>
+          <MdOutlineRefresh />
+        </button>
+        <button onClick={downloadImage}>
+          <MdOutlineFileDownload />
+        </button>
+      </div>
     </div>
   );
 };
