@@ -47,7 +47,7 @@ const DownloadPoster = () => {
     <div className="grow flex flex-col items-center p-4 gap-4">
       <div
         id="fullImg"
-        className="relative w-full mx-auto bg-white flex flex-col border-4 border-theme_green-500 items-center justify-start"
+        className="relative w-[310px] mx-auto bg-white flex flex-col border-4 border-theme_green-500 items-center justify-start"
       >
         <div className="flex w-full items-center justify-end px-4 mt-4">
           <img src={SANOFILOGO} alt="sanofi" className="w-16" />
