@@ -76,7 +76,7 @@ const DownloadPoster = () => {
         console.log(response);
         if (response.status === 200) {
           const link = document.createElement("a");
-          link.href = `https://initiatetocontrol.com/${response.data.path}`;
+          link.href = `https://besafebesmart.in/initiatetocontrol/${response.data.path}`;
           link.target = "_blank";
           link.setAttribute("download", "image.jpeg");
           document.body.appendChild(link);

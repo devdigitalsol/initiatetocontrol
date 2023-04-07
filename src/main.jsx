@@ -8,12 +8,12 @@ import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <AppState>
-    <BrowserRouter>
+  <BrowserRouter basename="/initiatetocontrol">
+    <AppState>
       <ToastContainer />
       <Routes>
         <Route path="/*" element={<App />} />
       </Routes>
-    </BrowserRouter>
-  </AppState>
+    </AppState>
+  </BrowserRouter>
 );

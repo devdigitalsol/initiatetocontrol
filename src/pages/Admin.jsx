@@ -323,12 +323,15 @@ const Admin = () => {
   const [posters, setPosters] = useState([]);
   useEffect(() => {
     const userData = async () => {
+      setIsFetching(true);
       try {
         const res = await axios.get("all-users.php");
         if (res.data?.users) {
-          setPosters(res.data?.users);
+          setPosters(res.data?.users.reverse());
+          setIsFetching(false);
         }
       } catch (error) {
+        setIsFetching(false);
         console.log(error);
       }
     };
