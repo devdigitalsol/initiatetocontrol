@@ -1,6 +1,8 @@
 import "regenerator-runtime/runtime";
-import React, { useContext, useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
+import LOGO from "./../assets/logo.png";
+import SANOFILOGO from "./../assets/sanofi_logo.svg";
 import Fancybox from "../components/fancybox";
 import { matchSorter } from "match-sorter";
 import { useExportData } from "react-table-plugins";
@@ -152,7 +154,7 @@ function Table({ columns, data }) {
       defaultColumn,
       filterTypes,
       getExportFileBlob,
-      initialState: { pageIndex: 0, pageSize: 10 },
+      initialState: { pageIndex: 0, pageSize: 20 },
     },
     useFilters, // useFilters!
     useGlobalFilter, // useGlobalFilter!
@@ -277,7 +279,7 @@ function Table({ columns, data }) {
             }}
             className="form-control !w-28 !px-1 !py-1 !rounded-sm"
           >
-            {[10, 20, 30, 40, 50].map((pageSize) => (
+            {[10, 20, 30, 40, 50, 100].map((pageSize) => (
               <option key={pageSize} value={pageSize}>
                 Show {pageSize}
               </option>
@@ -412,13 +414,18 @@ const Admin = () => {
   );
   return (
     <div className="p-6">
+      <div className="flex items-center gap-4 justify-between mb-4">
+        <img src={LOGO} alt="logo" className="h-8" />
+        <img src={SANOFILOGO} alt="logo" />
+      </div>
       <div className="bg-white shadow rounded-xl">
-        {" "}
         {isFetching && "fetching data..."}
-        {!isFetching && posters.length && (
+        {!isFetching && posters.length ? (
           <Fancybox>
             <Table columns={columns} data={posters} />
           </Fancybox>
+        ) : (
+          <div className="p-4 font-bold">No Data Found</div>
         )}
       </div>
     </div>
