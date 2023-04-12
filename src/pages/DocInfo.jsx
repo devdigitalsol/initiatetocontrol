@@ -152,8 +152,8 @@ const DocInfo = () => {
                     <option value="General Practitioner">
                       General Practitioner
                     </option>
-                    <option value="Consulting Physicians">
-                      Consulting Physicians
+                    <option value="Consulting Physician">
+                      Consulting Physician
                     </option>
                     <option value="Cardiologist">Cardiologist</option>
                     <option value="Other">Other</option>
