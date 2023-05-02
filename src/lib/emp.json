@@ -307,6 +307,7 @@
     {"emp_id":"113736","emp_name":"Saranraj C","emp_email":"C.Saranraj@sanofi.com","emp_contact":"9952210707","role":"FF","hq":"Vellore","manager_emp_id":"89315","am":"B Harish","rbm":"Susanth Sharma"},
     {"emp_id":"96604","emp_name":"Madhusudan Tahasildar Singh","emp_email":"Madhusudan.Singh@sanofi.com","emp_contact":"9936649777","role":"FF","hq":"Varanasi","manager_emp_id":"89978","am":"Anand Kumar Mishra","rbm":"Kaustubh Kiran"},
     {"emp_id":"111308","emp_name":"Jayant Kumar Mishra","emp_email":"JayantKumar.Mishra@sanofi.com","emp_contact":"7052148000","role":"FF","hq":"Varanasi","manager_emp_id":"89978","am":"Anand Kumar Mishra","rbm":"Kaustubh Kiran"},
+    {"emp_id":"96742","emp_name":"Mohit Mittal","emp_email":"Mohit.Mittal@sanofi.com","emp_contact":"8439256821","role":"FF","hq":"Merut","manager_emp_id":"89978","am":"Anand Kumar Mishra","rbm":"Kaustubh Kiran"},
     {"emp_id":"97285","emp_name":"Mittapally Srinivas","emp_email":"Mittapally.Srinivas@sanofi.com","emp_contact":"9397979900","role":"FF","hq":"Warangal","manager_emp_id":"97230","am":"Tanmoy Mallick","rbm":"Krishnanunni K V"},
     {"emp_id":"97650","emp_name":"Mohd Kaleem Pasha","emp_email":"Mohd.KaleemPasha@sanofi.com","emp_contact":"9550120022","role":"LM-1","hq":"Hyderabad","manager_emp_id":"68641","am":"Krishnanunni K V","rbm":"Kedar Chandrachuli"},
     {"emp_id":"113103","emp_name":"Shivansh Vyas","emp_email":"Shivansh.VYAS@sanofi.com","emp_contact":"9033586463","role":"LM-1","hq":"Ahmedabad","manager_emp_id":"88060","am":"Deepak Naveen S","rbm":"Kedar Chandrachuli"},
