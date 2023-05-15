@@ -290,6 +290,7 @@
     {"emp_id":"110407","emp_name":"R Karthik","emp_email":"R.Karthik@sanofi.com","emp_contact":"9940827892","role":"FF","hq":"Tiruchirappalli","manager_emp_id":"96155","am":"Sheik Khader","rbm":"Susanth Sharma"},
     {"emp_id":"112201","emp_name":"A Rengaraj","emp_email":"AA.Rengaraj@sanofi.com","emp_contact":"9940271169","role":"FF","hq":"Tiruchirappalli","manager_emp_id":"96155","am":"Sheik Khader","rbm":"Susanth Sharma"},
     {"emp_id":"111007","emp_name":"S B Mahendiran","emp_email":"SB.Mahendran@sanofi.com","emp_contact":"9500730153","role":"FF","hq":"Thanjavur","manager_emp_id":"97223","am":"Deepak Panwar","rbm":"Susanth Sharma"},
+    {"emp_id":"110188","emp_name":"Navaneetha Kumaran","emp_email":"navaneetha.kumaran@sanofi.com","emp_contact":"9629326689","role":"FF","hq":"Thanjavur","manager_emp_id":"97223","am":"Deepak Panwar","rbm":"Susanth Sharma"},
     {"emp_id":"111010","emp_name":"M Mohammed Ibrahim","emp_email":"MMohammed.Ibrahim@sanofi.com","emp_contact":"8098541417","role":"FF","hq":"Tirunelveli","manager_emp_id":"96155","am":"Sheik Khader","rbm":"Susanth Sharma"},
     {"emp_id":"113735","emp_name":"Balakrishna T","emp_email":"T.Balakrishna@sanofi.com","emp_contact":"9966983197","role":"FF","hq":"Tirupati","manager_emp_id":"89315","am":"B Harish","rbm":"Susanth Sharma"},
     {"emp_id":"97296","emp_name":"Binu Kumar C","emp_email":"Binu.Kumar@sanofi.com","emp_contact":"9544448007","role":"FF","hq":"Thiruvananthapuram","manager_emp_id":"113789","am":"Kumar D Abhishek","rbm":"Vinod Nair"},
