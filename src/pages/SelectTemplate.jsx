@@ -1,18 +1,27 @@
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import TEMP1 from "./../assets/thumbs/1.jpg";
 import { useNavigate } from "react-router-dom";
+import templates from "./templates";
+import { AppContext } from "../context";
+
 const SelectTemplate = () => {
   const navigate = useNavigate();
+  const { templateData, setTemplateData } = useContext(AppContext);
+
   const handleSelect = () => {
+    let poster_name = document
+      .querySelector(".swiper-slide-active")
+      .getAttribute("template-name");
+    setTemplateData({
+      ...templateData,
+      poster_name: poster_name,
+    });
+    console.log(poster_name, "fujhufhuhr");
     navigate("/doctor-information");
-    // let poster_name = document
-    //   .querySelector(".swiper-slide-active")
-    //   .getAttribute("template-name");
-    // console.log(poster_name);
   };
 
   return (
@@ -22,23 +31,26 @@ const SelectTemplate = () => {
       </h4>
       <div className="w-[80%]">
         <Swiper
+          className="mySwiper border-dashed border-theme_green-300 bg-slate-100"
+          modules={[Pagination, Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          pagination={true}
           navigation={{
             prevEl: ".prev",
             nextEl: ".next",
           }}
-          pagination={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper"
         >
-          <SwiperSlide template-name="temp1">
-            <img src={TEMP1} alt="temp1" className="w-full" />
-          </SwiperSlide>
-          {/* <SwiperSlide template-name="temp2">
-            <img src={TEMP1} alt="temp2" className="w-full" />
-          </SwiperSlide> */}
+          {templates.map((temp, index) => {
+            return (
+              <SwiperSlide key={index} template-name={temp.name}>
+                <img src={`${temp.path}`} alt="img" className="w-full" />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
-        <div className="swiper-button-prev prev swiperBtn"></div>
-        <div className="swiper-button-next next swiperBtn"></div>
+        <div className="swiper-button-prev prev swiperBtn">Prev</div>
+        <div className="swiper-button-next next swiperBtn">Next</div>
       </div>
       <button className="btn w-full" onClick={handleSelect}>
         Select Template

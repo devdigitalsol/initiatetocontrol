@@ -7,6 +7,10 @@ export const AppState = ({ children }) => {
   const [user, setUser] = useState(info || null);
   const [docInfo, setDocInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [templateData, setTemplateData] = useState({
+    poster_url: null,
+    poster_name: null,
+  });
   useEffect(() => {
     if (user) {
       localStorage.setItem("user", JSON.stringify(user));
@@ -19,6 +23,8 @@ export const AppState = ({ children }) => {
     setDocInfo,
     isLoading,
     setIsLoading,
+    templateData,
+    setTemplateData,
   };
   return <AppContext.Provider value={store}>{children}</AppContext.Provider>;
 };

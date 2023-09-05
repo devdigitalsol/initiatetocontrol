@@ -1,7 +1,9 @@
 import SANOFILOGO from "./../assets/sanofi_logo.svg";
 import BOTTOM from "./../assets/bottom.svg";
+import CONTENT from "./../assets/thumbs/Content.png";
 import HAND from "./../assets/hand12.svg";
 import CIRCLE from "./../assets/circleFrame.svg";
+import REMARK from "./../assets/thumbs/Remarks.png";
 import html2canvas from "html2canvas";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
@@ -11,6 +13,9 @@ import axios from "axios";
 const DownloadPoster = () => {
   const navigate = useNavigate();
   const { user, docInfo, setIsLoading } = useContext(AppContext);
+  const { templateData, setTemplateData } = useContext(AppContext);
+  console.log(templateData, "templateData");
+
   useEffect(() => {
     if (!docInfo) {
       navigate("/");
@@ -98,32 +103,81 @@ const DownloadPoster = () => {
         <div className="flex w-full items-center justify-end px-4 mt-4">
           <img src={SANOFILOGO} alt="sanofi" className="w-16" />
         </div>
-        <div className="mx-auto w-[120px] mt-6 relative">
-          <img src={CIRCLE} alt="sanofi" />
-          <img
-            src={docInfo?.photo}
-            className="rounded-full absolute top-[13px] left-[1px] w-[108px]"
-            alt="doctor"
-          />
-        </div>
-        <div className="flex items-center justify-center gap-2 mt-6 w-[260px] mx-auto">
-          <div className="w-[50px]">
-            <img src={HAND} alt="sanofi" width={"50px"} height={"auto"} />
-          </div>
-          <div className="w-1 h-full bg-theme_green-300"></div>
-          <div>
-            <div className="text-theme-blue text-lg px-2 w-full font-semibold block leading-5 pb-1 capitalize">
-              {docInfo?.fullName}
+
+        {templateData.poster_name && templateData.poster_name === "temp1" && (
+          <>
+            <div className="flex items-center justify-center  w-[260px] mx-auto  ">
+              <div className="">
+                <div className="mx-auto w-[120px] mt-2 relative">
+                  <img src={CIRCLE} alt="sanofi" />
+                  <img
+                    src={docInfo?.photo}
+                    className="rounded-full absolute top-[13px] left-[1px] w-[108px]"
+                    alt="doctor"
+                  />
+                </div>
+              </div>
+              <div className=" mt-6 ">
+                <div className="text-theme-blue text-lg px-2 w-full font-semibold block leading-5 pb-1 capitalize">
+                  {docInfo?.fullName}
+                </div>
+                <div className="w-full h-1 bg-theme_green-300"></div>
+                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                  {docInfo?.speciality}
+                </div>
+                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                  {docInfo?.place}
+                </div>
+              </div>
             </div>
-            <div className="text-sm px-2 w-full text-slate-600 truncate block">
-              {docInfo?.speciality}
+            <div className="p-4">
+              <img
+                src={CONTENT}
+                alt="bottom"
+                width={"100%"}
+                className="w-full"
+              />
             </div>
-            <div className="text-sm px-2 w-full text-slate-600 truncate block">
-              {docInfo?.place}
+            <div className="p-4">
+              <img
+                src={REMARK}
+                alt="bottom"
+                width={"100%"}
+                className="w-full"
+              />
             </div>
-          </div>
-        </div>
-        <img src={BOTTOM} alt="bottom" width={"100%"} className="w-full" />
+          </>
+        )}
+        {templateData.poster_name && templateData.poster_name === "temp2" && (
+          <>
+            <div className="mx-auto w-[120px] mt-6 relative">
+              <img src={CIRCLE} alt="sanofi" />
+              <img
+                src={docInfo?.photo}
+                className="rounded-full absolute top-[13px] left-[1px] w-[108px]"
+                alt="doctor"
+              />
+            </div>
+            <div className="flex items-center justify-center gap-2 mt-6 w-[260px] mx-auto">
+              <div className="w-[50px]">
+                <img src={HAND} alt="sanofi" width={"50px"} height={"auto"} />
+              </div>
+              <div className="w-1 h-full bg-theme_green-300"></div>
+              <div>
+                <div className="text-theme-blue text-lg px-2 w-full font-semibold block leading-5 pb-1 capitalize">
+                  {docInfo?.fullName}
+                </div>
+                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                  {docInfo?.speciality}
+                </div>
+                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                  {docInfo?.place}
+                </div>
+              </div>
+            </div>
+            <img src={BOTTOM} alt="bottom" width={"100%"} className="w-full" />
+          </>
+        )}
       </div>
       <div className="actionBtns">
         <button onClick={reloadPage}>
