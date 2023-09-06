@@ -4,6 +4,7 @@ import CONTENT from "./../assets/thumbs/Content.png";
 import HAND from "./../assets/hand12.svg";
 import CIRCLE from "./../assets/circleFrame.svg";
 import REMARK from "./../assets/thumbs/Remarks.png";
+import CODE from "./../assets/thumbs/code.png";
 import html2canvas from "html2canvas";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
@@ -138,12 +139,17 @@ const DownloadPoster = () => {
                 className="w-full"
               />
             </div>
-            <div className="p-4">
+            <div className="p-4 relative">
               <img
                 src={REMARK}
                 alt="bottom"
                 width={"100%"}
                 className="w-full"
+              />
+              <img
+                src={CODE}
+                alt="codeimg"
+                className="absolute right-0 bottom-8 "
               />
             </div>
           </>
@@ -175,7 +181,19 @@ const DownloadPoster = () => {
                 </div>
               </div>
             </div>
-            <img src={BOTTOM} alt="bottom" width={"100%"} className="w-full" />
+            <div className="relative">
+              <img
+                src={BOTTOM}
+                alt="bottom"
+                width={"100%"}
+                className="w-full"
+              />
+              <img
+                src={CODE}
+                alt="codeimg"
+                className="absolute right-0 bottom-6 "
+              />
+            </div>
           </>
         )}
       </div>
