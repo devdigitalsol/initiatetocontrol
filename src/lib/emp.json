@@ -343,5 +343,7 @@
     {"emp_id":"113789","emp_name":"Kumar D Abhishek","emp_email":"Abhishek.DKumar@sanofi.com","emp_contact":"9745164123","role":"LM-1","hq":"Thiruvananthapuram","manager_emp_id":"87488","am":"Vinod Nair","rbm":"Kedar Chandrachuli"},
     {"emp_id":"89669","emp_name":"Pratik K Shah","emp_email":"Pratik.Shah@sanofi.com","emp_contact":"9879618588","role":"LM-1","hq":"Vadodara","manager_emp_id":"88060","am":"Deepak Naveen S","rbm":"Kedar Chandrachuli"},
     {"emp_id":"73377","emp_name":"Tanmay Kumar Dey","emp_email":"Tanmay.Dey@sanofi.com","emp_contact":"9849588508","role":"LM-1","hq":"Visakhapatnam","manager_emp_id":"87931","am":"Susanth Sharma","rbm":"Kedar Chandrachuli"},
-    {"emp_id":"12345678","emp_name":"Sanofi HO","emp_email":"ho@sanofi.com","emp_contact":"0000000000","role":"HO","hq":"India","manager_emp_id":"12345678","am":"Sanofi HO","rbm":"Sanofi HO"}
+    {"emp_id":"12345678","emp_name":"Sanofi HO","emp_email":"ho@sanofi.com","emp_contact":"0000000000","role":"HO","hq":"India","manager_emp_id":"12345678","am":"Sanofi HO","rbm":"Sanofi HO"},
+    {"emp_id":"114054","emp_name":"sk tausif uddin","emp_email":"sktausif.uddin@sanofi.com","emp_contact":"6291769354","role":"FF - SSE","hq":"Tamluk","manager_emp_id":"","am":"Debadidev Bhattacharya","rbm":"R. Arun"},
+    {"emp_id":"96234","emp_name":"Sudip Dutta","emp_email":"Sudip.Dutta@sanofi.com","emp_contact":"9339795383","role":"FF - TM","hq":"Kolkata","manager_emp_id":"89943","am":"Rupam Pal","rbm":"R Arun"}
     ]
