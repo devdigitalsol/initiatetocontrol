@@ -118,14 +118,14 @@ const DownloadPoster = () => {
                 </div>
               </div>
               <div className=" mt-6 ">
-                <div className="text-theme-blue text-lg px-2 w-full font-semibold block leading-5 pb-1 capitalize">
+                <div className="text-purple-900 text-sm px-2 w-full font-bold block leading-5 pb-1 capitalize">
                   {docInfo?.fullName}
                 </div>
-                <div className="w-full h-1 bg-theme_green-300"></div>
-                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                <div className="w-full h-[1px] bg-theme_purple-500"></div>
+                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
                   {docInfo?.place}
                 </div>
               </div>
@@ -164,13 +164,13 @@ const DownloadPoster = () => {
               </div>
               <div className="w-1 h-full bg-theme_green-300"></div>
               <div>
-                <div className="text-theme-blue text-lg px-2 w-full font-semibold block leading-5 pb-1 capitalize">
+                <div className="text-purple-900 text-lg px-2 w-full font-bold block leading-5 pb-1 capitalize">
                   {docInfo?.fullName}
                 </div>
-                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-2 w-full text-slate-600 truncate block">
+                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
                   {docInfo?.place}
                 </div>
               </div>
