@@ -118,14 +118,14 @@ const DownloadPoster = () => {
                 </div>
               </div>
               <div className=" mt-6 ">
-                <div className="text-purple-900 text-sm px-2 w-full font-bold block leading-5 pb-1 capitalize">
+                <div className="text-purple-900 text-sm px-1 w-full font-bold block leading-5 pb-1 capitalize">
                   {docInfo?.fullName}
                 </div>
                 <div className="w-full h-[1px] bg-theme_purple-500"></div>
-                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
+                <div className="text-sm px-1 w-full text-black truncate block font-semibold">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
+                <div className="text-sm px-1 w-full text-black truncate block font-semibold">
                   {docInfo?.place}
                 </div>
               </div>
