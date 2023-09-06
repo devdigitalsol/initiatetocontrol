@@ -107,26 +107,26 @@ const DownloadPoster = () => {
 
         {templateData.poster_name && templateData.poster_name === "temp1" && (
           <>
-            <div className="flex items-center justify-center  w-[260px] mx-auto  ">
+            <div className="flex items-center justify-center   w-[280px] mx-auto  ">
               <div className="">
-                <div className="mx-auto w-[120px] mt-2 relative">
+                <div className="mx-auto w-[90px]   relative">
                   <img src={CIRCLE} alt="sanofi" />
                   <img
                     src={docInfo?.photo}
-                    className="rounded-full absolute top-[13px] left-[1px] w-[108px]"
+                    className="rounded-full absolute top-[13px] left-[1px] w-[78px]"
                     alt="doctor"
                   />
                 </div>
               </div>
-              <div className=" mt-6 ">
-                <div className="text-purple-900 text-sm px-1 w-full font-bold block leading-5 pb-1 capitalize">
+              <div className=" mt-6  ">
+                <div className="text-purple-900 text-lg px-1 w-full ml-1 font-bold block leading-5 pb-1 capitalize">
                   {docInfo?.fullName}
                 </div>
-                <div className="w-full h-[1px] bg-theme_purple-500"></div>
-                <div className="text-sm px-1 w-full text-black truncate block font-semibold">
+                <div className="w-full h-[1px] bg-theme_purple-800"></div>
+                <div className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500] ">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-1 w-full text-black truncate block font-semibold">
+                <div className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500]">
                   {docInfo?.place}
                 </div>
               </div>
@@ -149,7 +149,7 @@ const DownloadPoster = () => {
               <img
                 src={CODE}
                 alt="codeimg"
-                className="absolute right-0 bottom-8 "
+                className="absolute right-0 bottom-8 h-[100px] "
               />
             </div>
           </>
@@ -173,10 +173,10 @@ const DownloadPoster = () => {
                 <div className="text-purple-900 text-lg px-2 w-full font-bold block leading-5 pb-1 capitalize">
                   {docInfo?.fullName}
                 </div>
-                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
+                <div className="text-sm px-2 w-full text-gray-900 truncate block ">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-2 w-full text-black truncate block font-semibold">
+                <div className="text-sm px-2 w-full text-gray-900 truncate block ">
                   {docInfo?.place}
                 </div>
               </div>
@@ -191,7 +191,7 @@ const DownloadPoster = () => {
               <img
                 src={CODE}
                 alt="codeimg"
-                className="absolute right-0 bottom-6 "
+                className="absolute right-0 bottom-6 h-[30%] "
               />
             </div>
           </>
