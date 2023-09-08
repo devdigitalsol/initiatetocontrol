@@ -348,7 +348,10 @@
     {"emp_id":"96234","emp_name":"Sudip Dutta","emp_email":"Sudip.Dutta@sanofi.com","emp_contact":"9339795383","role":"FF - TM","hq":"Kolkata","manager_emp_id":"89943","am":"Rupam Pal","rbm":"R Arun"},
     {"emp_id":"87836","emp_name":"Rajendra Dharmavat","emp_email":"Rajendra.Dharmavat@sanofi.com","emp_contact":"9890633023","role":"FF - SSE","hq":"Pune","manager_emp_id":"88359","am":"Ajay Gaud","rbm":"Krishnan Unni"},
     {"emp_id":"114058","emp_name":"Anandan.D","emp_email":"anandan.d@sanofi.com","emp_contact":"8110059039","role":"FF - SSE","hq":"chennai","manager_emp_id":"97223","am":"Deepak panwar","rbm":"Sushanth sharma"},
-    {"emp_id":"114072","emp_name":"Santanu panda","emp_email":"santanu.panda@sanofi.com","emp_contact":"7003358264","role":"FF - TM","hq":"Kolkata","manager_emp_id":"89943","am":"Rupam Pal","rbm":"R Arun"}
-
-
+    {"emp_id":"114072","emp_name":"Santanu panda","emp_email":"santanu.panda@sanofi.com","emp_contact":"7003358264","role":"FF - TM","hq":"Kolkata","manager_emp_id":"89943","am":"Rupam Pal","rbm":"R Arun"},
+    {"emp_id":"97431","emp_name":"Anurag Mishra","emp_email":"Anurag.mishra@sanofi.com","emp_contact":"9838831388","role":"SSE","hq":"Kanpur","manager_emp_id":"88994","am":"Sanjay Singh","rbm":"Kaustubh Kiran"},
+    {"emp_id":"114024","emp_name":"Neha Malik","emp_email":"Neha.malik2@sanofi.com","emp_contact":"8580446552","role":"FF -  SSE","hq":" Delhi","manager_emp_id":"110221","am":"Amit Kumar Yadav","rbm":"Shravan Jha"},
+    {"emp_id":"114025","emp_name":"Md Riyaz","emp_email":"md.riyaz@sanofi.com","emp_contact":"7093012029","role":"FF - SSE","hq":"Hyderabad","manager_emp_id":"97230","am":"Tanmoy Mallick","rbm":"Unni krishnan"},
+    {"emp_id":"97169","emp_name":"Pankaj arora","emp_email":"pankaj.arora@sanofi.com","emp_contact":"8295963789","role":"FF - SSE","hq":"Karnal","manager_emp_id":"I0057862","am":"Mr Rajneesh kumar","rbm":"Mr Shravan Jha"},
+    {"emp_id":"113948","emp_name":"Rajiv Kumar","emp_email":"rajivr.kumar@sanofi.com","emp_contact":"9871291760","role":"FF -  CSA","hq":"Delhi","manager_emp_id":"110221","am":"Amit Kumar Yadav","rbm":"Shravan Jha"}
     ]
