@@ -108,7 +108,7 @@ const DownloadPoster = () => {
 
         {templateData.poster_name && templateData.poster_name === "temp1" && (
           <>
-            <div className="flex items-center justify-center   w-[280px] mx-auto  ">
+            <div className="flex items-center justify-center  w-[280px] mx-auto  ">
               <div className="">
                 <div className="mx-auto w-[90px]   relative">
                   <img src={CIRCLE} alt="sanofi" />

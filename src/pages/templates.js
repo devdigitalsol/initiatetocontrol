@@ -5,20 +5,14 @@ import TEMP3 from "../assets/thumbs/3.jpg";
 const templates = [
   {
     name: "temp1",
-    // theme: 1,
-    // lang: ["english"],
     path: TEMP1,
   },
   {
     name: "temp2",
-    // theme: 1,
-    // lang: ["english"],
     path: TEMP2,
   },
   {
     name: "temp3",
-    // theme: 1,
-    // lang: ["english"],
     path: TEMP3,
   },
 ];
