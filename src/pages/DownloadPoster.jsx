@@ -5,18 +5,18 @@ import HAND from "./../assets/hand12.svg";
 import CIRCLE from "./../assets/circleFrame.svg";
 import REMARK from "./../assets/thumbs/Remarks.png";
 import CODE from "./../assets/thumbs/code.png";
-import CONTENTHINDI from "./../assets/thumbs/Content_Hindi.png";
 import html2canvas from "html2canvas";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
 import { useNavigate } from "react-router-dom/dist";
 import { MdOutlineRefresh, MdOutlineFileDownload } from "react-icons/md";
 import axios from "axios";
+import Language from "./Language";
+
 const DownloadPoster = () => {
   const navigate = useNavigate();
   const { user, docInfo, setIsLoading } = useContext(AppContext);
   const { templateData, setTemplateData } = useContext(AppContext);
-  console.log(templateData, "templateData");
 
   useEffect(() => {
     if (!docInfo) {
@@ -133,12 +133,18 @@ const DownloadPoster = () => {
               </div>
             </div>
             <div className="p-4">
-              <img
-                src={CONTENT}
-                alt="bottom"
-                width={"100%"}
-                className="w-full"
-              />
+              {Language.filter((value) => value.lang === docInfo.language).map(
+                (element) => {
+                  return (
+                    <img
+                      src={element.img}
+                      alt="bottom"
+                      width={"100%"}
+                      className="w-full"
+                    />
+                  );
+                }
+              )}
             </div>
             <div className="p-4 relative">
               <img
@@ -155,56 +161,8 @@ const DownloadPoster = () => {
             </div>
           </>
         )}
+
         {templateData.poster_name && templateData.poster_name === "temp2" && (
-          <>
-            <div className="flex items-center justify-center   w-[280px] mx-auto  ">
-              <div className="">
-                <div className="mx-auto w-[90px]   relative">
-                  <img src={CIRCLE} alt="sanofi" />
-                  <img
-                    src={docInfo?.photo}
-                    className="rounded-full absolute top-[13px] left-[1px] w-[78px]"
-                    alt="doctor"
-                  />
-                </div>
-              </div>
-              <div className=" mt-6  ">
-                <div className="text-purple-900 text-lg px-1 w-full ml-1 font-bold block leading-5 pb-1 capitalize">
-                  {docInfo?.fullName}
-                </div>
-                <div className="w-full h-[1px] bg-theme_purple-800"></div>
-                <div className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500] ">
-                  {docInfo?.speciality}
-                </div>
-                <div className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500]">
-                  {docInfo?.place}
-                </div>
-              </div>
-            </div>
-            <div className="p-4">
-              <img
-                src={CONTENTHINDI}
-                alt="bottom"
-                width={"100%"}
-                className="w-full"
-              />
-            </div>
-            <div className="p-4 relative">
-              <img
-                src={REMARK}
-                alt="bottom"
-                width={"100%"}
-                className="w-full"
-              />
-              <img
-                src={CODE}
-                alt="codeimg"
-                className="absolute right-0 bottom-8 h-[100px] "
-              />
-            </div>
-          </>
-        )}
-        {templateData.poster_name && templateData.poster_name === "temp3" && (
           <>
             <div className="mx-auto w-[120px] mt-6 relative">
               <img src={CIRCLE} alt="sanofi" />

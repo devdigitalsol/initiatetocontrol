@@ -6,6 +6,8 @@ import { AppContext } from "../context";
 import { useNavigate } from "react-router-dom/dist";
 const DocInfo = () => {
   const { setDocInfo } = useContext(AppContext);
+  const { templateData, setTemplateData } = useContext(AppContext);
+  console.log(templateData, "templateData");
   const navigate = useNavigate();
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Doctor name is required"),
@@ -15,6 +17,7 @@ const DocInfo = () => {
       then: Yup.string().notRequired(),
       otherwise: Yup.string().required("Please Specify Speciality"),
     }),
+    language: Yup.string().required("language is required"),
     place: Yup.string().required("Doctor Clinic / Hospital Name is required"),
     photo: Yup.mixed().when({
       is: null,
@@ -32,6 +35,7 @@ const DocInfo = () => {
             fullName: "",
             speciality: "",
             otherSpeciality: "",
+            language: "",
             place: "",
             photo: null,
           }}
@@ -43,6 +47,7 @@ const DocInfo = () => {
                 val.speciality === "Other"
                   ? val.otherSpeciality
                   : val.speciality,
+              language: val.language,
               place: val.place,
               photo: val.photo,
             };
@@ -196,6 +201,45 @@ const DocInfo = () => {
                   />
                   <ErrorMessage
                     name="place"
+                    component="div"
+                    className="hasError"
+                  />
+                </div>
+                {/* language section added */}
+                <div className="relative form-group">
+                  <label htmlFor="language" className="form-label">
+                    Language
+                  </label>
+                  <Field
+                    as="select"
+                    id="language"
+                    name="language"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className="form-control"
+                  >
+                    {templateData.poster_name == "temp1" ? (
+                      <>
+                        <option value="">Select Language</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Gujrati">Gujrati</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Malayalam">Malayalam</option>
+                        <option value="Marathi">Marathi</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="">Select Language</option>
+                        <option value="English">English</option>
+                      </>
+                    )}
+                  </Field>
+                  <ErrorMessage
+                    name="language"
                     component="div"
                     className="hasError"
                   />

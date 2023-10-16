@@ -20,7 +20,6 @@ const SelectTemplate = () => {
       ...templateData,
       poster_name: poster_name,
     });
-    console.log(poster_name, "fujhufhuhr");
     navigate("/doctor-information");
   };
 
