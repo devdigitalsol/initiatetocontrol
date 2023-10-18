@@ -187,7 +187,10 @@ const DownloadPoster = () => {
                 <div className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500] ">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500]">
+                <div
+                  className="text-sm px-1 w-full ml-1 text-gray-900 truncate block font-[500]"
+                  style={{ marginTop: "-4px" }}
+                >
                   {docInfo?.place}
                 </div>
               </div>
@@ -251,7 +254,10 @@ const DownloadPoster = () => {
                 <div className="text-sm px-2 w-full text-gray-900 truncate block ">
                   {docInfo?.speciality}
                 </div>
-                <div className="text-sm px-2 w-full text-gray-900 truncate block ">
+                <div
+                  className="text-sm px-2 w-full text-gray-900 truncate block "
+                  style={{ marginTop: "-4px" }}
+                >
                   {docInfo?.place}
                 </div>
               </div>
