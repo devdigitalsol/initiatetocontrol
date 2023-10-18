@@ -45,13 +45,13 @@ const DownloadPoster = () => {
       .then((canvas) => {
         var myImage = canvas.toDataURL("image/jpeg", 1);
         uploadData(myImage);
-        // const link = document.createElement("a");
-        // link.href = myImage;
-        // link.target = "_blank";
-        // link.setAttribute("download", "image.jpeg");
-        // document.body.appendChild(link);
-        // link.click();
-        // setIsLoading(false);
+        const link = document.createElement("a");
+        link.href = myImage;
+        link.target = "_blank";
+        link.setAttribute("download", "image.jpeg");
+        document.body.appendChild(link);
+        link.click();
+        setIsLoading(false);
       })
       .catch(function (error) {
         console.log(error);
