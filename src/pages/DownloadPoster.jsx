@@ -43,7 +43,7 @@ const DownloadPoster = () => {
       },
     })
       .then((canvas) => {
-        var myImage = canvas.toDataURL("image/jpeg", 1);
+        var myImage = canvas.toDataURL("image/jpeg", 0.8);
         uploadData(myImage);
         const link = document.createElement("a");
         link.href = myImage;
