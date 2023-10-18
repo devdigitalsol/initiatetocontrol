@@ -51,7 +51,6 @@ const DocInfo = () => {
               place: val.place,
               photo: val.photo,
             };
-            // console.log(data);
             setDocInfo(data);
             navigate("/download-poster");
           }}
@@ -230,6 +229,12 @@ const DocInfo = () => {
                         <option value="Kannada">Kannada</option>
                         <option value="Malayalam">Malayalam</option>
                         <option value="Marathi">Marathi</option>
+                      </>
+                    ) : templateData.poster_name == "temp2" ? (
+                      <>
+                        <option value="">Select Language</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
                       </>
                     ) : (
                       <>
