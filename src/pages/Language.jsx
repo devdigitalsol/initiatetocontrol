@@ -7,8 +7,13 @@ import CONTENTTAMIL from "../assets/thumbs/Tamil.png";
 import CONTENTKANNADA from "../assets/thumbs/Kannada.png";
 import CONTENTMALAYALAM from "../assets/thumbs/Malyalam.png";
 import CONTENTMARATHI from "../assets/thumbs/Marathi.png";
+import CONTENTENGLISH from "../assets/thumbs/English.png";
 
 const Language = [
+  {
+    lang: "English",
+    img: CONTENTENGLISH,
+  },
   {
     lang: "Bengali",
     img: CONTENTBENGALI,

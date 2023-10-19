@@ -220,8 +220,9 @@ const DocInfo = () => {
                     {templateData.poster_name == "temp1" ? (
                       <>
                         <option value="">Select Language</option>
+                        <option value="English">English</option>
                         <option value="Bengali">Bengali</option>
-                        <option value="Gujrati">Gujrati</option>
+                        <option value="Gujrati">Gujarati</option>
                         <option value="Hindi">Hindi</option>
                         <option value="Punjabi">Punjabi</option>
                         <option value="Telugu">Telugu</option>
