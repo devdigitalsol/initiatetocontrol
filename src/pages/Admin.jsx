@@ -329,6 +329,8 @@ const Admin = () => {
       try {
         const res = await axios.get("all-users.php");
         if (res.data?.users) {
+          console.log(res.data, "Response");
+          console.log(res.data.users, "Users Data in admin page");
           setPosters(res.data?.users.reverse());
           setIsFetching(false);
         }
